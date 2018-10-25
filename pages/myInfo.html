@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="keywords" content="奇幻小说,穿越小说,电子小书,看书网">
+    <meta name="description" content="看书网,用心为用户打造的快乐小说平台,拥有海量电子小说,奇幻小说,看小说更畅爽,让快乐更简单！">
+    <title>看书网 | 让快乐更简单</title>
+    <link type="text/css" rel="stylesheet" href="../css/gen_db.css">
+    <link type="text/css" rel="stylesheet" href="../css/profile.css">
+    <link type="text/css" rel="stylesheet" href="../css/header.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body id="page-163-com" class="page-myInfor ">
+<div id="J_FIXED" class="m-tipss" style="display: none;">
+    <div id="J_TIPS" class="inner">发表成功</div>
+</div>
+<div class="g-doc"></div>
+<script type="text/javascript">
+    $(".g-doc").load("../pages/public-head.html");
+</script>
+
+
+<div class="g-bdw" style="margin-bottom: 40px;">
+    <div class="g-bd">
+        <div class="g-bdc">
+            <div class="g-iwrap" id="g-iwrap">
+                <div class="m-mainctrl">
+
+                    <!--左侧列表-->
+                    <div id="my-list"></div>
+                    <script type="text/javascript">
+                        $("#my-list").load("../pages/my-list.html");
+                    </script>
+                </div>
+                <!--个人资料-->
+                <div id="personalData"></div>
+                <script type="text/javascript">
+                    $("#personalData").load("../pages/my-personal-data.html");
+                </script>
+
+                <!--我的红包-->
+                <!--<div style="display: none" class="m-mainbox">-->
+                    <!--<div class="m-bonus">-->
+                        <!--<div class="list m-tableinfo">-->
+                            <!--<div class="hint">-->
+                                <!--<p class="fl">账户中有<em>&nbsp;0&nbsp;</em>个红包可用，共-->
+                                    <!--<em>&nbsp;0&nbsp;</em>阅点-->
+                                <!--</p>-->
+                                <!--<p class="fl" style="margin-left:30px;">红包状态：-->
+                                    <!--<select id="J_Select">-->
+                                        <!--<option data-msg="全部" value="all" selected="">全部</option>-->
+                                        <!--<option data-msg="可用" value="available">可用</option>-->
+                                        <!--<option data-msg="已使用" value="used">已使用</option>-->
+                                        <!--<option data-msg="已过期" value="expire">已过期</option>-->
+                                    <!--</select>-->
+                                <!--</p>-->
+                                <!--<p class="fr" style="margin-top:0;">-->
+                                    <!--<a class="active" href="exchangeHB.html">我有兑换码，我要兑换</a>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="hint">-->
+                                <!--<p class="nofind">当前选择范围内无红包</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--书籍兑换记录-->
+                <!--<div style="display: none" class="m-mainbox">-->
+                    <!--<div class="m-bonus">-->
+                        <!--<div class="list m-tableinfo m-tableinfo-1">-->
+                            <!--<div class="hint" style="border-bottom:#dedede dotted 1px;">-->
+                                <!--<p class="fl">共<em>0</em>条兑换记录</p>-->
+                            <!--</div>-->
+                            <!--<div class="hint">-->
+                                <!--<p class="nofind">暂无兑换记录</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--购书单-->
+                <!--<div style="display: none" class="m-mainbox">-->
+                    <!--<div class="m-bookcart">-->
+                        <!--<div class="tip">-->
+                            <!--<p>您的购书单还是空的，您可以去<a href="GFHome.html">国风中文网</a>、<a href="CWHome.html">采薇书院</a>-->
+                            <!--</p>-->
+                            <!--<p>看看有没有感兴趣的书</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="profile" class="m-layer m-layer-2" style="top: 109.5px; left: 50%; margin-left: -325px;display: none;">
+    <div class="lytt yy"><h4>编辑资料</h4><a id="J_Popclose" href="#" class="lyclose j-close">关闭</a></div>
+    <div class="lyct">
+        <div class="m-sec">
+            <div class="sub">头像:</div>
+            <div class="main">
+                <div class="inner">
+                    <div class="edit1 ">
+                        <div class="imgbox"><img id="photoshow" src="../images/tx.png"
+                                                 alt="头像"></div>
+                        <input type="hidden" id="imageUrl" value="">
+                        <div class="txtbox">
+                            <form id="edit1Form" method="post" enctype="multipart/form-data">
+                                <p class="pra1">上传新头像 <span>(支持JPG, BMP, PNG格式，最大不超过15M)</span></p>
+                                <p class="pra4"></p>
+                                <div class="fw"><input id="btnD" name="file" class="file" type="file"></div>
+                                <p></p>
+                                <p class="pra4"><input onclick="uploadFiles()" id="btnA" class="button" type="button"
+                                                       value="上传文件"></p>
+                                <p class="pra2 hidden">正在上传...</p>
+                                <p class="pra3 hidden">网络出错导致上传失败，请重试。</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-sec">
+            <div class="sub">昵称:</div>
+            <div class="main main-2">
+                <div class="inner">
+                    <input id="nn" class="ipttxt nickname" type="text" maxlength="30">
+                    <p class="nicktip">请输入2-15个字符，支持中英文、数字、符号。</p>
+                </div>
+            </div>
+        </div>
+        <div class="m-sec">
+            <div class="sub">性别:</div>
+            <div class="main">
+                <div class="inner">
+                    <p id="gd" class="gender"><input type="radio" class="gradio" name="ss">男<input type="radio"
+                                                                                                   class="gradio"
+                                                                                                   name="ss">女</p>
+                </div>
+            </div>
+        </div>
+        <div class="m-sec">
+            <div class="sub">简介:</div>
+            <div class="main">
+                <div class="inner">
+                    <textarea id="intro-area" class="ipttxt txt"></textarea>
+                    <p class="intro">用简短的话语描述自己，当前已输入<span id="writed"></span>字。最多输入120字。</p>
+                </div>
+            </div>
+        </div>
+        <div class="m-sec m-sec-1">
+            <div class="sub">标签:</div>
+            <div class="main">
+                <div class="inner">
+                    <div class="tags">
+                        <ul id="cur-con">
+                            <li><a class="cur added" href="javascript:void(0);" value="数码">数码</a></li>
+                            <li><a class="cur added" href="javascript:void(0);" value="漫画">漫画</a></li>
+                            <li><a class="cur added" href="javascript:void(0);" value="动画">动画</a></li>
+                        </ul>
+                    </div>
+                    <h3>你可能感兴趣的标签：<a id="change-tags" href="javascript:void(0);">换一批</a></h3>
+                    <div class="tags">
+                        <ul id="new-con">
+                            <li><a class="new added" href="javascript:void(0);" value="电影">电影</a></li>
+                            <li><a class="new added" href="javascript:void(0);" value="时尚">时尚</a></li>
+                            <li><a class="new added" href="javascript:void(0);" value="动画">动画</a></li>
+                            <li><a class="new added" href="javascript:void(0);" value="数码">数码</a></li>
+                            <li><a class="new added" href="javascript:void(0);" value="漫画">漫画</a></li>
+                        </ul>
+                    </div>
+                    <p class="alert" style="display:none;"></p>
+                    <p class="ttip">给自己打上标签，有助于系统为您推荐更符合你口味的内容源。</p>
+                </div>
+            </div>
+        </div>
+        <div class="m-sec">
+            <div class="bt">
+                <button type="button" class="userLayerClose">取消</button>
+                <button type="button" onclick="updateUser();">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部导航-->
+<div id="my-bottom"></div>
+<script type="text/javascript">
+    $("#my-bottom").load("../pages/my-bottom.html");
+</script>
+
+<script type="text/javascript" src="../js/myInfo.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+</body>
+</html>

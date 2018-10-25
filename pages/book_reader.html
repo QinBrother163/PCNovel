@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="keywords" content="奇幻小说,穿越小说,电子小书,看书网">
+    <meta name="description" content="看书网,用心为用户打造的快乐小说平台,拥有海量电子小说,奇幻小说,看小说更畅爽,让快乐更简单！">
+    <title>看书网 | 让快乐更简单</title>
+    <link type="text/css" rel="stylesheet" href="../css/book_reader.css">
+    <link type="text/css" rel="stylesheet" href="../css/reader.css">
+    <link type="text/css" rel="stylesheet" href="../css/sns-plugin.css">
+    <style type="text/css">
+        .page-percent div {
+            display: inline-block;
+            border: 1px solid #eee;
+            border-radius: 20px;
+            padding: 0px 50px;
+        }
+
+        .page-percent div:hover {
+            cursor: pointer;
+            background-color: #eee;
+            color: #000;
+        }
+    </style>
+</head>
+<body class="normal-book">
+<div id="J_Player" class="player-container skin-normal" style="display: block;">
+    <div class="aside" id="J_Aside" style="display: block">
+        <div class="booktitle">
+            <h1><a href="novelDetails.html" target="_blank" title="猎天下">猎天下</a></h1>
+            <div class="pic">
+                <a href="novelDetails.html" target="_blank">
+                    <img
+                            src="https://easyreadfs.nosdn.127.net/jVLEy-MNKrhWZtxhWzMEsA==/8796093023979529870?imageView&amp;thumbnail=90x0&amp;quality=90"
+                            srcset="https://easyreadfs.nosdn.127.net/jVLEy-MNKrhWZtxhWzMEsA==/8796093023979529870?imageView&amp;thumbnail=180x0&amp;quality=90 2x"
+                            alt="猎天下">
+                </a>
+            </div>
+        </div>
+
+        <ul class="getbook">
+            <li class="ebook-buy"><a href="payChapter.html" class="btn-red">购买</a></li>
+            <li class="put-shelf"><a onclick="addBookrack(this);" class="btn-gray">放入书架</a></li>
+        </ul>
+
+        <ul class="userop">
+            <!--<li class="review-trigger"><i></i><a href="#">评论（<span class="J_CommentSize">88</span>）</a></li>-->
+            <li onclick="share(event)" class="share-trigger"><i></i><a class="J_YueduSNS">分享</a></li>
+            <li class="present-trigger"><i></i>
+                <a target="_blank" href="novelDetails.html">打赏</a>
+            </li>
+        </ul>
+        <ul class="other-plat">
+            <li onclick="setBGColor(event);" class="theme-trigger"><i class="icon"></i><a href="#">主题模式</a><i
+                    class="angle"></i></li>
+            <li class="scan-code">
+                <a href="#" target="_blank"></a>
+            </li>
+        </ul>
+        <div id="J_AddShelfPop" class="shelf-pop">
+            <i class="close">关闭</i>
+            <p>是否把本书放入书架</p>
+            <p><a href="#" class="add">放入书架</a><a href="#" class="cancel">取消</a></p>
+        </div>
+        <div class="aside-trigger"><a onclick="setSidebar(this)" class="open" id="J_AsideTrigger"></a></div>
+        <div id="J_Forward" class="share r-hide">
+            <div class="inner">
+                <div class="topbar">
+                    <h5>顺便说几句</h5><a id="J_CmtSwitch" class="j-close"></a><span class="wrap"><span id="J_Words">0</span> / 140</span>
+                </div>
+                <form id="publishForm" action="" method="post">
+                    <div class="txt-input">
+                        <textarea id="J_ForTxt" name="message"></textarea>
+                    </div>
+                    <div class="botbar">
+                        <span class="zf">分享至：</span>
+                        <ul>
+                            <li class="sns1">
+                                <input name="site" value="2" type="checkbox">
+                                <span class="mask"></span>
+                            </li>
+                            <li class="sns2">
+                                <input name="site" value="1" type="checkbox">
+                                <span class="mask"></span>
+                            </li>
+                            <li class="sns3">
+                                <input name="site" value="4" type="checkbox">
+                                <span class="mask"></span>
+                            </li>
+                            <li class="sns4">
+                                <input name="site" value="3" type="checkbox">
+                                <span class="mask"></span>
+                            </li>
+                            <li class="sns6">
+                                <input name="site" value="6" type="checkbox">
+                                <span class="mask"></span>
+                            </li>
+                        </ul>
+                        <a class="send">分享</a>
+                    </div>
+                </form>
+                <input type="hidden" id="J_GoWhere">
+                <div id="J_AtrLayer" style="display:none;" class="atr">
+                    <p>你的微博尚未得到授权，<a id="J_AtrGo">去授权&gt;&gt;</a></p>
+                    <a class="j-close-1"></a>
+                </div>
+            </div>
+        </div>
+        <div id="J_Theme" class="theme r-hide">
+            <a href="#" class="J_Light" data-theme="1000">日间模式</a>
+            <a href="#" class="J_Dark" data-theme="1004">夜间模式</a>
+            <a href="#" class="J_Normal " data-theme="1001">经典模式</a>
+            <a href="#" class="J_Green" data-theme="1003">护眼模式</a>
+            <a href="#" class="J_Pink" data-theme="1002">女性模式</a>
+            <i></i>
+        </div>
+    </div>
+    <div class="panel" id="J_Panel">
+        <div id="adTopBanner"></div>
+        <div class="chapter-title" id="J_ChapterTitle">独家版权声明</div>
+        <ul class="panel-list" id="J_BookPanel">
+            <li onclick="showCatalogue()" class="cata-trigger"><a id="J_CatalogueTrigger" title="目录">目录</a>
+                <div class="J_GuideDemo_1 J_GuideDemo_2"><em></em>目录</div>
+            </li>
+            <li onclick="setFont(this,event)" class="font-trigger"><a id="J_FontSizeTrigger" title="字号">字号</a>
+                <div class="J_GuideDemo_1 J_GuideDemo_2"><em></em>字体大小</div>
+            </li>
+            <li onclick="setBookmark(this,event)" class="bookmark-trigger"><a id="J_BookMarkTrigger" title="书签">书签</a>
+                <div class="J_GuideDemo_1 J_GuideDemo_2" style="display: none;"><em></em>书签</div>
+            </li>
+            <li class="home-trigger"><a href="../index.html" id="J_GoHomeTrigger" title="返回">返回</a>
+                <div class="J_GuideDemo_1 J_GuideDemo_2"><em></em>频道首页</div>
+            </li>
+        </ul>
+        <!--目录-->
+        <div class="catalogue r-hide" id="J_Catalogue">
+            <div class="catainner J_CataInner" style="height: 757px;">
+                <i class="angle"></i>
+                <i class="close J_Close"></i>
+                <div class="hd"><h2>目录</h2></div>
+                <div class="bd">
+                    <dl>
+                        <dt><i class="bar"></i><a href="javascript:;" data-charindex="2">第一部 劫妖录</a></dt>
+                        <dd>
+                            <ul class="chapter-list">
+                                <li><a href="#" data-charindex="3">第1章 楔子</a></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul class="chapter-list">
+                                <li><a href="#" data-charindex="5">第2章</a></li>
+                                <li><a href="#" data-charindex="6">第3章</a></li>
+                                <li><a href="#" data-charindex="7">第4章</a></li>
+                                <li><a href="#" data-charindex="8">第5章</a></li>
+                                <li><a href="#" data-charindex="9">第6章</a></li>
+                                <li><a href="#" data-charindex="10">第7章</a></li>
+                                <li><a href="#" data-charindex="11">第8章</a></li>
+                                <li><a href="#" data-charindex="12">第9章</a></li>
+                                <li><a href="#" data-charindex="13">第10章</a></li>
+                                <li><a href="#" data-charindex="14">第11章</a></li>
+                                <li><a href="#" data-charindex="15">第12章</a></li>
+                                <li><a href="#" data-charindex="16">第13章</a></li>
+                                <li><a href="#" data-charindex="17">第14章</a></li>
+                                <li><a href="#" data-charindex="18">第15章</a></li>
+                                <li><a href="#" data-charindex="20">第16章</a></li>
+                                <li><a href="#" data-charindex="21">第17章</a></li>
+                                <li><a href="#" data-charindex="22">第18章</a></li>
+                                <li><a href="#" data-charindex="23">第19章</a></li>
+                                <li><a href="#" data-charindex="24">第20章</a></li>
+                                <li><a href="#" data-charindex="25">第21章</a></li>
+                                <li><a href="#" data-charindex="26">第22章</a></li>
+                                <li><a href="#" data-charindex="27">第23章</a></li>
+                                <li><a href="#" data-charindex="28">第24章</a></li>
+                                <li><a href="#" data-charindex="29">第25章</a></li>
+                                <li><a href="#" data-charindex="30">第26章</a></li>
+                                <li><a href="#" data-charindex="31">第27章</a></li>
+                                <li><a href="#" data-charindex="32">第28章</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!--书签-->
+        <div class="bookmark r-hide" id="J_BookMark" style="height: 797px;">
+            <i class="angle"></i>
+            <i class="close J_Close"></i>
+            <div class="add J_Add"><a href="#">将本页加入书签</a></div>
+            <ul class="list J_BookmarkList" style="height: 699px;">
+                <li style="">
+                    <div class="tit"><h4>第一章 暗杀</h4><span>0.1%&nbsp;&nbsp;&nbsp;&nbsp;2018-6-6</span></div>
+                    <div class="desc"></div>
+                    <i class="flag"></i>
+                    <a class="delete">删除</a>
+                </li>
+            </ul>
+            <div class="J_Pager"></div>
+        </div>
+        <div class="jumppage r-hide" id="J_JumpPage">
+            <i class="angle"></i>
+            <p>到<input type="text" name=""><span>%</span><a href="#">确定</a></p>
+        </div>
+        <div class="font r-hide" id="J_Font">
+            <i class="angle"></i>
+            <ul>
+                <li class="font16"><a data-id="14px" href="#">14号</a></li>
+                <li class="font18"><a data-id="16px" href="#">16号</a></li>
+                <li class="font20"><a data-id="18px" href="#">18号</a></li>
+                <li class="font24"><a data-id="22px" href="#">22号</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="unsupported" id="J_Unsupported">
+        <div>该书暂不支持在电脑端阅读。请<a href="/client">下载安装客户端</a>
+            <p>
+                <a href="#" target="_blank" class="code"></a>
+            </p>
+        </div>
+    </div>
+    <div class="horizontal-player" id="J_Horizontal">
+        <div class="prev-turn J_PrevTurn"><a href="javascript:void(0)" hidefocus="true"></a></div>
+        <div class="article-wrap">
+            <div class="article J_Article">
+                <div class="article-content">
+                    <div class="horizontal-page-box J_HorizontalMoveBox"></div>
+                </div>
+                <div class="page-percent J_Percent"></div>
+            </div>
+        </div>
+        <div class="next-turn J_NextTurn"><a href="javascript:void(0)" hidefocus="true"></a></div>
+    </div>
+    <div class="portrait-player" id="J_Portrait" style="display: block">
+        <div class="page-style" style="display: block;overflow: hidden">
+            <div class="top-stone"></div>
+            <div class="article J_Article" style="display: block;overflow-y: scroll;">
+                <div class="portrait-page-box J_PortraitMoveBox" style="">
+                    <div class="article-content">
+                        <!--可以看的书状态-->
+                        <div class="ne-content J_NEContent" style="display: block;">
+                            <h1><span>第1章 楔子</span></h1>
+                            <p>Long Long Long Long Long Long Long Long ago……</p>
+                            <p>当时有座山，山上有棵树。 </p>
+                            <p>山是通天之柱，树是天地灵气的汇集。可以这么说，假如没有这棵树，也不会有这座通天之柱。</p>
+                            <p>这座山直上青云，这棵树拔地参天。山中尽是突峰兀石，说它是天柱，它其实有千里之阔，想要围绕它走上一周，却是穷尽人类的一生都无法达成。</p>
+                            <p>那时候，还没有世界，没有国家，只有家园。</p>
+                            <p>
+                                千里之山，其树更沃。那树究竟有多大，很难形容，它能容纳世间所有用来形容树木和巨大的词汇，据说它生长于山顶，从树下望不到树顶，被层云所掩盖，它是许多生灵的家园。</p>
+                            <p>
+                                那座山的名字，叫做不周山。后世的人们都知道，它是支撑天与地的巨柱，后来被共工所撞断，从此天塌地陷，女蜗不得已，采五彩石补天，但是却很少有人知道，不周山是妖的国度和家园，而那棵树，则是不周山上所有生灵的【命脉】。</p>
+                            <p>
+                                妖、是后世人们对它们的称呼，反常即为妖，因为它们拥有人所不具备的种种超能之力。那时的人类，还茹毛饮血，蛮化未开，对于不周山与不周山上的生灵，充满了敬畏和崇拜。那时的人们，总是在山下举行各式各样的祭祀，通过膜拜和献祭，向不周山上的生灵们祈求风调雨顺、趋吉避害。</p>
+                            <p>
+                                相传、不周山是人界通往神界的唯一路径，但不周山终年寒冷，长年飘雪，寻常人根本不可能徒步登山。低等的妖们，居住在下山腰处，它们时常也会给人类制造一些灾难，伤害人类的性命，而越是高处的大妖，越是血统高贵，拥有更厉害的能力和超常的感知力，也越是高傲，它们通常不屑于脚下卑微的人类，对于它们而言，人类如同蝼蚁，它们是介乎于神一般的存在。</p>
+                            <p>树顶穿过漠漠云层，直抵神界，大妖们观察人间的生活，也常盘于树顶之上与神祇交流。</p>
+                            <p>
+                                世间原本是这样的平衡，直到某一天，一个叫做共工的人，跟一个叫做颛顼的人，因素来不合引发惊天动力的人界大战，颛顼借不周山妖神之说蛊惑了民心，愤怒的共工驾着两条孽龙，本想冲上不周山去找山中大妖理论，受到大妖的冷落之后，共工愤而驾着两条龙去撞击不周山，采用玉石俱焚的法子，驾着那两条龙一次一次狠狠撞击在那棵树上，结果却是引发了不周山的坍塌。</p>
+                            <p>
+                                千里之堤毁于蚁穴，树的根基，撼动了高拔万丈的不周山，妖国丧失自己的生存之地，三界混乱，生灵涂炭，最终，在两位大神女娲和伏羲的调停下，妖族代表白泽与人族代表姜子牙，以人界命脉【盘古胎衣】和妖族命脉【劫妖录】互为交换，订立契约，换取三界停战平衡。</p>
+                            <p>
+                                【劫妖录】记录着来自太古时代，远于人类存在于不周山妖族众妖的真名，掌握妖之真名，便等于掌握了它们的命脉，可以借以【劫妖录】对它们进行控制，哪怕是高贵的，近乎神一样存在的大妖都不得不听从命令。</p>
+                            <p>
+                                不周山的不复存在，迫使众妖只能与人类共存在同一个世间，彼此之间摩擦不断，时常发生人妖大战，伤亡惨重，关系也愈见恶化。姜子牙为维护人与妖之间的和谐，创建【御城守】这一特殊机构，遍布世间各大城镇，不管俗世王朝的更迭，御城守这一机构永远存在，负责维护两界的规则和秩序，让失去家园的不周山妖族能在人类的地盘上安居，人妖两界互不侵犯。</p>
+                            <p>
+                                但是妖性难改的还是大有其存在，会趁着黑夜化为原型为非作歹。而血统更加高贵的大妖们，几千年来，一直渴望重新得到【劫妖录】，并且摧毁御城守，人与妖之间的明争暗斗，从未真正的结束……</p>
+                            <p>
+                                【劫妖录】在御城守流传千载，却在东汉末年，从御城守成员于吉的手上丢失。当时世间爆发瘟疫，于吉心地善良，便偷偷利用劫妖录调遣小妖给百姓治病，于吉身边有个捡来的重病患，名叫张角，张角无意间发现了劫妖录的秘密，并将劫妖录偷走，因为不得其法，反而造成一场浩劫，结局非常的惨烈，死了大批的人，也死了大批的妖。大妖们纷纷藏匿起来，而御城守也失去了【劫妖录】的下落，直到大唐太宗年间，【劫妖录】再一次现世，这次居然就落到了一个和尚手里。</p>
+                            <p style="margin-bottom: 55px;">这个和尚不是别人，他就是大名鼎鼎的唐僧——玄奘。</p>
+                            <p>玄奘拥有了【劫妖录】后，他都做了什么呢？</p>
+                            <p>他……什么都没做……</p>
+                            <p>
+                                他的一生，不是在去取经的路上，就是在取经回来的路上，最后的时光，也是在翻译从西天取回的真经上。对于这本足以号令世间妖众的花名册，他一没有兴趣，二没有时间。</p>
+                            <p>玄奘的这种行为，对众妖而言，简直就是暴殄天物！</p>
+                            <p>
+                                自从【劫妖录】的再一次现世起，世间妖族便蠢蠢欲动，谁都想要得到它。在后世流传的名著《西游记》中，容貌出众的大唐和尚玄奘，一路西天取经的路上，遇到各种各样的妖怪，它们要么钟意他的肉，要么钟意他的肉体，都想要据为己有。然而，真相往往隐藏在传说的背后。</p>
+                            <p style="margin-bottom: 23px;">
+                                玄奘西行归来，身边四个徒弟，封神的封神，成圣的成圣。一路各式各样的妖怪，也被打杀的打杀了，封印的封印了，归降的归降了，关于【劫妖录】的事情，一度销声匿迹，然而，却在玄奘圆寂之后的若干年后，【劫妖录】被不识货的凡夫俗子，连同玄奘法身、舍利、翻译的经文，一道被收在长安城内的消息不胫而走。</p>
+                        </div>
+                        <!--余额不足看书状态-->
+                        <div class="ne-content J_NEContent" style="top: 0px;display: none">
+                            <div class="chapter-buy J_ChapterBuy clearfix" style="overflow: hidden;">
+                                <div class="orig-buy">
+                                    <div class="wallet">
+                                        账户余额：<span>0</span>阅点&nbsp;&nbsp;
+
+                                        <span>余额不足</span>
+                                        <a href="pay.html" target="_blank" class="J_ToRecharge">去充值</a>
+                                    </div>
+                                    <div class="orig-buy-option-1">
+                                        <p>此章节为收费章节，需<span class="hot">11</span>阅点(0.11元)</p>
+                                        <div class="button">
+                                            <a href="javascript:;" class="btn-red ok J_Done">购买本章</a>
+                                        </div>
+                                    </div>
+                                    <div class="orig-buy-option-2">
+                                        <p>还有489章可购买<br>（不包含作者未发布章节）</p>
+                                        <p>
+                                            <a href="payChapter.html" class="J_MultiBuy" target="_blank">批量购买</a>
+                                        </p>
+                                    </div>
+                                    <div class="orig-buy-option-3">
+                                        <p>当阅读到收费章节时，将自动为您购买</p>
+                                        <p id="J_OpenAutoSub"><a href="#" class="J_OpenAutoSub">开启自动订阅</a></p>
+                                    </div>
+                                </div>
+                                <!--<div class="hongbao-info">-->
+                                <!--<div class="inner" style="width:400px;left:128px;">-->
+                                <!--<p>点击或扫描二维码下载客户端，在手机上阅读</p>-->
+                                <!--<p><a href="/download" target="_blank" class="code"-->
+                                <!--onclick="_gaq.push(['_trackEvent', 'download', 'mid2codedownload','bookreader']);"></a>-->
+                                <!--</p>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                        <!--下一章-->
+                        <div class="page-percent J_NEPercent" style="height: 200px;margin-top: 50px;text-align: center;">
+                            <div onclick="skipChapter(this)" data-id="1">上一章</div>
+                            <div onclick="skipChapter(this)" data-id="2" style="margin-left: 50px">下一章</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book-recommand" id="J_BookRecommand" style="right: 14px; display: block;">
+        <dl>
+            <dt>编辑推荐</dt>
+            <dd>
+                <ul class="editorrecommend">
+
+                    <li>
+                        <h5>
+                            <a target="_blank" href="novelDetails.html" title="大名利场">大名利场</a>
+                        </h5>
+                        <div class="price"></div>
+                        <div class="cover">
+                            <a target="_blank" href="novelDetails.html" title="大名利场">
+                                <img src="https://easyreadfs.nosdn.127.net/so6aIZTCpmJR5MKO-icDpg==/8796093024033426535"
+                                     alt="大名利场"></a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h5>
+                            <a target="_blank" href="novelDetails.html" title="特种炊事班 ">特种炊事班 </a>
+                        </h5>
+                        <div class="price"></div>
+                        <div class="cover">
+                            <a target="_blank" href="novelDetails.html" title="特种炊事班 ">
+                                <img src="https://easyreadfs.nosdn.127.net/r1fFSwd1c1xx_JAADSCv2w==/8796093023673509667"
+                                     alt="特种炊事班 "></a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h5>
+                            <a target="_blank" href="novelDetails.html" title="虎队传奇">虎队传奇</a>
+                        </h5>
+                        <div class="price">和阳散人</div>
+                        <div class="cover">
+                            <a target="_blank" href="novelDetails.html" title="虎队传奇">
+                                <img
+                                        src="https://easyreadfs.nosdn.127.net/STUKAl2AvaRSZ5AWMHVeZg==/8796093023514697944"
+                                        alt="虎队传奇"></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </dd>
+        </dl>
+        <div class="recommand-trigger"><a onclick="setSidebar(this)" class="open" id="J_RecommandTrigger"></a></div>
+    </div>
+</div>
+
+<div class="word" id="J_Word">
+    <div class="word-hd">
+        <div class="top-bar"></div>
+        <div class="hd-section">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_05.png?49d6aae2">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_06.png?fcb2c5a2">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_07.png?223acaca">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_08.png?3bb2a614">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_09.png?31c54620">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_10.png?a16d18d7">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_11.png?319f833d">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_12.png?56111b36">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_13.png?33fded48">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_14.png?203a702a">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_15.png?ec48b253">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_16.png?1417db67">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_17.png?08a7554a">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_18.png?ff6a41ab">
+            <img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_19.png?b48c6018">
+            <a href="#" class="word-btn J_CancelWord"><img
+                    src="//yuedust.yuedu.126.net/js/reader/images/word/bg_04.png?555f6eaa"></a>
+        </div>
+    </div>
+    <div class="word-ft">
+        <div class="ft-sec-1"><img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_20.png?bb879ac4"></div>
+        <div class="ft-sec-2"><img src="//yuedust.yuedu.126.net/js/reader/images/word/bg_21.png?5cba65c3"></div>
+    </div>
+</div>
+<!--遮罩层-->
+<div class="entire-buy-mask" style="display: none"></div>
+<!--微信分享框-->
+<div id="sns-overlay0" class="sns-overlay" style="display: none; top: 357px; left: 301px;">
+    <div class="hd"><h4 class="t-weixin"><i></i>分享到微信</h4><a href="#" class="close J_Close">关闭</a></div>
+    <div class="bd">
+        <div class="wxqr">
+            <img src="">
+        </div>
+        <p class="wxtip">用微信“扫一扫”，打开网页后点击屏幕右上角“...”</p>
+        <p class="wxtip">发送给朋友或分享到朋友圈</p></div>
+</div>
+<!--分享前提示没有绑定账号-->
+<div id="sns-overlay1" class="sns-overlay" style="display: none; top: 313px; left: 301px;">
+    <div class="J_SendBox">
+        <div class="hd"><h4 class="t-renren"><i></i>人人网分享</h4><a href="#" class="close J_Close">关闭</a></div>
+        <div class="bd"><p class="need-auth">您还没有绑定人人网，请先去绑定</p></div>
+        <div class="ft"><a class="J_Close dis-btn">取消</a><a class="J_GoAuth btn">绑定</a></div>
+    </div>
+</div>
+<!--新浪分享已绑定账号框-->
+<div id="J_XLFX" class="sns-overlay" style="display: none; top: 313px; left: 301px;">
+    <div class="J_SendBox">
+        <div class="hd"><h4 class="t-sina-weibo"><i></i>新浪微博分享</h4><a href="#" class="close J_Close">关闭</a></div>
+        <div class="bd">
+            <form>
+                <div class="textarea-box"><textarea class="J_ContentArea" name="message"
+                                                    style="width: 320px;"></textarea>
+                    <div class="img-box"><img class="J_ImgShareBtn"
+                                              src="https://easyreadfs.nosdn.127.net/fRaJvQPoIiOOVzRJjeXQGQ==/8796093024207246344"
+                                              style="height: 105px; width: 75px;"><b></b></div>
+                    <a href="#" class="at-friends J_ToAtFriends" style="">@新浪微博好友</a></div>
+                <input type="hidden" name="site" value="1"><input type="hidden" name="sourceUuid"
+                                                                  value="75d9863f65384f1e9986a173ea8d0673_4"><input
+                    type="hidden" name="subjectId" value="75d9863f65384f1e9986a173ea8d0673_4"><input type="hidden"
+                                                                                                     name="title"
+                                                                                                     value="火神"><input
+                    type="hidden" name="shareType" value="2"><input type="hidden" name="url"
+                                                                    value="http://163.fm/RYjfNh2C"><input type="hidden"
+                                                                                                          name="imageUrl"
+                                                                                                          value="https://easyreadfs.nosdn.127.net/fRaJvQPoIiOOVzRJjeXQGQ==/8796093024207246344"><input
+                    type="hidden" name="imageDescription" value="清末以来，天津卫的奇人异士层出不穷，有所谓“七绝八怪”，或占一绝、或为一怪，其中有正有邪、有善有恶。在“七绝八怪”之上还有“四神三妖”，“三妖”如何暂且留个悬念，后续再谈，这“四神”分别是：无宝不识窦占龙、降妖捉怪崔老道、屡破奇案郭得友、追凶拿贼刘横顺。本书就以追凶拿贼的“火神”刘横顺为主要角色，具体描绘了其伏妖诛邪、屡破天津卫奇诡血案的惊险过程。
+
+收尸白骨塔　夜探阴阳路　寻宝乱葬沟……
+
+《火神》是天下霸唱继《鬼吹灯》后，极其宏大、惊悚、精彩的全新悬疑巨制，将为读者带来一场非同凡响的文字盛宴。"><input type="hidden" name="operation" value="publishSingle">
+            </form>
+        </div>
+        <div class="ft"><p>还可输入<span class="J_WordCount" style="color: rgb(102, 102, 102);">101</span>字</p><a href="#"
+                                                                                                              class="btn J_Send">发送</a>
+        </div>
+    </div>
+</div>
+<!--错误提示-->
+<div class="popo-public popo-black" style="left: 367px; display: none;">
+    出错了，请稍后重试!
+</div>
+<!--正在购买-->
+<div id="J_ZZGM" class="pop" style="left: 375px; top: 300px;display: none;">
+    <div class="hd">正在购买<a href="#" class="close J_Cancel">关闭</a></div>
+    <div class="bd">
+        <div class="recharge"><p class="tip-title">在新打开的页面上完成购买操作：</p>
+            <p class="pay-info">
+                <span>购买成功：</span>
+                <a href="#" class="J_Done">继续阅读</a>
+                <a href="myInfo.html" class="J_QueryRest" target="_blank">余额查询</a></p>
+            <p class="pay-info"><span>购买失败：</span><a href="help.html" class="J_Help" target="_blank">购买帮助</a></p>
+        </div>
+    </div>
+</div>
+<!--账号不足-->
+<div id="J_ZHBZ" class="pop" style="left: 443px; top: 300px; display: none;">
+    <div class="hd">充值<a href="#" class="close J_Cancel">关闭</a></div>
+    <div class="bd">
+        <div class="recharge"><p class="tip-title">账户余额不足，需要充值再购买</p>
+            <div class="button">
+                <a href="pay.html" target="_blank" class="btn-red ok J_ToRecharge">充值</a>
+                <a href="javascript:;" class="btn-gray cancel J_Cancel">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--自动订阅-->
+<div id="J_ZZDY" class="pop r-hide r-show" style="left: 443px; top: 365px;display: none">
+    <div class="hd">自动订阅<a href="#" class="close J_Cancel">关闭</a></div>
+    <div class="bd">
+        <p class="tip-title">确定开启自动订阅？</p>
+        <p class="pay-info cool">开启之后若想关闭，请前往“个人中心”的“自动订阅”进行操作</p>
+        <div class="button">
+            <a href="#" class="btn-red ok J_Done">确定</a>
+            <a href="#" class="btn-gray cancel J_Cancel">取消</a>
+        </div>
+    </div>
+</div>
+<!--分享框-->
+<ul class="sns-droplist" style="display: none; top: 550px; left: 220.328px; position: absolute; width: 80px;">
+    <li class="weixin" data-index="0"><a href="javascript:void(0)"><i></i><span>微信</span></a></li>
+    <li class="sina-weibo" data-index="4"><a href="javascript:void(0)"><i></i><span>新浪微博</span></a></li>
+    <li class="qq-weibo" data-index="5"><a href="javascript:void(0)"><i></i><span>腾讯微博</span></a></li>
+    <li class="netease-weibo" data-index="6"><a href="javascript:void(0)"><i></i><span>网易微博</span></a></li>
+    <li class="sohu-weibo" data-index="7"><a href="javascript:void(0)"><i></i><span>搜狐微博</span></a></li>
+    <li class="renren" data-index="8"><a href="javascript:void(0)"><i></i><span>人人网</span></a></li>
+    <li class="email" data-index="9" style="display: none;"><a href="javascript:void(0)"><i></i><span>邮件分享</span></a>
+    </li>
+    <li class="qzone" data-index="10" style="display: none;"><a href="javascript:void(0)"><i></i><span>QQ空间</span></a>
+    </li>
+</ul>
+<!--提示框-->
+<div id="J_FIXED" class="m-tipss" style="display: none;top: 200px">
+    <div id="J_TIPS" class="inner" style="padding: 10px 50px;">发表成功</div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/book_reader.js"></script>
+</body>
+</html>

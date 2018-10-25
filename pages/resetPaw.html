@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="keywords" content="奇幻小说,穿越小说,电子小书,看书网">
+    <meta name="description" content="看书网,用心为用户打造的快乐小说平台,拥有海量电子小说,奇幻小说,看小说更畅爽,让快乐更简单！">
+    <title>看书网 | 让快乐更简单</title>
+    <link type="text/css" rel="stylesheet" href="../css/register.css">
+    <style type="text/css">
+        .passStatus{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -245px;
+            margin-left: -230px;
+            z-index: 9999;
+        }
+        .passStatus .wrap{
+            text-align: center;
+            width: 500px;
+            height: 150px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 5px 5px #cbc9c9;
+        }
+        .passStatus div{
+            display: inline-block;
+        }
+        .passStatus .img{
+            width: 23px;
+            height: 23px;
+            padding: 0 2px 0 0;
+            background: url(../images/wgd-tick-s.png) no-repeat;
+        }
+        .passStatus .name{
+            width: 100%;
+            font-size: 24px;
+            color: #333;
+            margin-top: 35px;
+        }
+        .passStatus .login{
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 25px;
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(44, 130, 255);
+            border-radius: 4px;
+            padding: 0 15px;
+            line-height: 32px;
+            height: 32px;
+            background: rgb(49, 133, 255);
+        }
+    </style>
+</head>
+<body id="auto-id-1526369171452">
+<input id="hid_pkid" type="hidden" value="">
+<input id="hid_pkht" type="hidden" value="">
+<input id="hid_pd" type="hidden" value="">
+<div id="tost-b"><!--Regular list--></div>
+
+<!--成功-->
+<div class="passStatus" style="display: none">
+    <div class="wrap">
+        <div class="name"><div class="img"></div>  重置密码成功！</div>
+        <a href="../pages/login.html"><p class="login">马上登录</p></a>
+    </div>
+</div>
+
+<!--失败-->
+<div class="passStatus" style="display: none">
+    <div class="wrap">
+        <div class="name"><div class="img" style="background-position: -55px -66px;"></div>  重置密码失败！</div>
+        <p class="login">重新申述</p>
+    </div>
+</div>
+
+
+<div class="g-hd">
+    <div class="g-in">
+        <a href="http://reg.163.com/" target="_blank">
+            <div class="m-logo spritebg"></div>
+        </a>
+        <div class="m-tr-block">已有帐号？去<a id="btn_Login" href="login.html">登录</a></div>
+    </div>
+</div>
+<div id="reg_block" class="g-bd">
+    <div class="clearfix m-tab">
+        <div class="left select">重置密码</div>
+    </div>
+    <div class="m-opr clearfix">
+        <form id="bind-phone-form" class="" autocomplete="off">
+            <div class="u-input firstelem">
+                <label for="inpt-account" class="u-label">帐号：</label>
+                <input type="text" name="email" id="inpt-account" class="i-inpt" placeholder="手机号/用户名">
+                <div class="auto-1526369171449 m-sug" id="auto-id-1526369171455" style="visibility: hidden;"></div>
+                <input type="text" name="username" style="display: none;">
+                <div class="u-tip f-dn">
+                    <div class="spritebg u-clear" id="auto-id-1526369171471"></div>
+                </div>
+                <table class="popb err">
+                    <!--  background-position: -2px -2px;  状态好的时候，以下通用   -->
+                    <tbody><tr><td class="b-i"><i></i></td><td class="b-p">该帐号已注册</td></tr></tbody>
+                </table>
+            </div>
+            <div class="u-input">
+                <label for="inpt-pw" class="u-label">密码：</label>
+                <input type="password" name="password" style="display: none;">
+                <input type="password" name="pwd" id="inpt-pw" placeholder="6-16位密码，区分大小写" class="i-inpt ">
+                <div class="u-tip f-dn">
+                    <div class="spritebg u-clear" id="auto-id-1526369171472"></div>
+                </div>
+                <table class="popb err">
+                    <tbody><tr><td class="b-i"><i></i></td><td class="b-p">密码须由6-16个字符组成，区分大小写</td></tr></tbody>
+                </table>
+            </div>
+            <div class="u-input">
+                <label for="inpt-pw2" class="u-label">确认密码：</label>
+                <input type="password" name="pwd2" id="inpt-pw2" placeholder="再次输入密码" class="i-inpt ">
+                <div class="u-tip f-dn">
+                    <div class="spritebg u-clear" id="auto-id-1526369171473"></div>
+                </div>
+                <table class="popb err">
+                    <tbody><tr><td class="b-i"><i></i></td><td class="b-p">密码过于简单，请重新设置</td></tr></tbody>
+                </table>
+            </div>
+
+
+            <div class="u-input j-phone-box">
+                <label for="inpt-phone" class="u-label">手机号：</label>
+                <input type="text" name="phone" id="inpt-phone" placeholder="11位手机号" maxlength="20" class="i-inpt ">
+                <div class="u-tip f-dn">
+                    <div class="spritebg u-clear" id="auto-id-1526369171475"></div>
+                </div>
+                <table class="popb err">
+                    <tbody><tr><td class="b-i"><i></i></td><td class="b-p">请输入正确的手机号</td></tr></tbody>
+                </table>
+            </div>
+            <div class="u-input m-country j-country-box f-dn" style="overflow: visible;">
+                <label for="inpt-phone" class="u-label">手机号：</label>
+                <div class="country flag-US j-itlBtn" data-code="+1-" id="auto-id-1526369171469">
+                    <em></em>
+                </div>
+                <input type="text" name="phone-itl" id="inpt-phone-itl" placeholder="手机号" class="i-inpt ">
+                <div class="u-tip f-dn">
+                    <div class="spritebg u-clear" id="auto-id-1526369171476"></div>
+                </div>
+            </div>
+
+            <div class="u-input">
+                <label for="inpt-sms" class="u-label">短信验证码：</label>
+                <input type="text" name="sms" id="inpt-sms" placeholder="输入短信验证码" maxlength="6" class="i-inpt smsize ">
+                <div class="u-tip f-dn">
+                    <div class="spritebg u-clear" id="auto-id-1526369171477"></div>
+                </div>
+                <span onclick="getTime(this)" class="b-btn btn-getsms btn-getsms-btndisabled">获取验证码</span>
+            </div>
+            <div class="u-input" style="height: 58px;">
+                <label class="u-label">&nbsp;</label>
+                <!-- opacity: 1  是高亮     0.6 虚掩 -->
+                <div onclick="getBeg()" class="b-btn btn-reg btn-red btndisabled">提&nbsp;&nbsp;交 </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="g-ft">
+    <div class="g-in">
+        <div class="m-cp">
+            <p>
+                <a href="#" target="_blank">About NetEase</a>-<a
+                    href="#" target="_blank">公司简介</a>-<a
+                    href="#" target="_blank">联系方式</a>-<a
+                    href="#" target="_blank">OAuth2.0认证</a>-<a
+                    href="#" target="_blank">招聘信息</a>-<a href="http://help.163.com/"
+                                                                                           target="_blank">客户服务</a>-<a
+                    href="#" target="_blank">相关法律</a>-<a
+                    href="#" target="_blank">网络营销</a>
+            </p>
+            <p>网易公司版权所有 ©1997-2018</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/resetPaw.js"></script>
+</body>
+</html>
